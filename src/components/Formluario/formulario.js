@@ -13,12 +13,12 @@ const Formulario = () => {
     return <div className='formulario'>
         <form onSubmit={preventForm}> 
             <h2> Rellena el formulario para crear el colaborador.</h2>
-            <CampoTexto titulo= 'Nombre' placeholder="Ingresa tu Nombre"/>
-            <CampoTexto titulo = 'Puesto' placeholder="Ingresa tu puesto"/>
-            <CampoTexto titulo = 'Equipo' placeholder="Ingresa tu equipo"/>
+            <CampoTexto titulo= 'Nombre' placeholder="Ingresa tu Nombre" required={true}/> {/* La prop required se le manda el parametro true para indicar que sea verdadera la requisicion obligatoria  */} 
+            <CampoTexto titulo = 'Puesto' placeholder="Ingresa tu puesto" required/> {/* No es necesario amdar el true ya que sin eso por sis olo es verdadera */}
+            <CampoTexto titulo = 'Foto' placeholder="Ingresa tu Foto" required/>
             <ListaOpciones />
-            <Btn texto ='Crear'/> 
-
+            <Btn texto ='Crear'/>      
+      
 
         </form>
 

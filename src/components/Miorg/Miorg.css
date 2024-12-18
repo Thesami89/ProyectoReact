@@ -1,0 +1,21 @@
+.mi-org{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    color: #6278F7;
+    font-size: 40px;
+    font-weight: 400;
+    font-family: "Prata", serif;
+    padding-bottom: 20px;
+    border-bottom: 4px solid #6278F7;
+    
+}
+
+.mi-org img{
+    position: absolute;
+    right: 30%;
+    cursor: pointer;
+}

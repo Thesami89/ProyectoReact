@@ -1,0 +1,16 @@
+.card{
+    background-color: #D9F7E9;
+    padding: 32px;
+    text-align: center;
+    box-sizing: border-box;
+    
+}
+
+.card h3{
+    font-size: 32px;
+    font-family: 'prata', sans-serif;
+    font-weight: 400;
+    border-bottom: 4px solid ;
+    display: inline-block;
+    padding-bottom: 8px;
+}

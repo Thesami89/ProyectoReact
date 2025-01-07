@@ -3,7 +3,6 @@ import './CampoTexto.css'
 
 //Una propo es una propiedad que se pasa es casi igual que los parametros en una funcion y perite pasar inforacion mediangte ellos
 const CampoTexto = (props) => {
-    console.log(props)
 
    /* const [cambio, actualizarCambio] = useState('') //Recuerda que el useSatate sirve parahacer estados de los componentes */
 

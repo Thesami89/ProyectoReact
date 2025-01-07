@@ -1,7 +1,7 @@
 import './ListaOpciones.css'
 const ListaOpciones = (props) =>{
 
-    const equipos = [
+   /*  const equipos = [
         'programacion',
         'Front-End',
         'Data Science',
@@ -10,12 +10,12 @@ const ListaOpciones = (props) =>{
         'Movil',
         'Inovacion y Gestion',
 
-    ]
+    ] */
 
     /* La sintaxis del .map es a siguinete:
     
     Arreglo.map((nombre que recibe los datos, index) => {
-        return ponemos l que quermos que nos retorne e puede utiliar codig html y js 
+        return ponemos l que quermos que nos retorne e puede utiliar codig html y js 1
         })*/
 
     const actualizarEquipos = (e) =>{
@@ -26,7 +26,7 @@ const ListaOpciones = (props) =>{
         <label>Equipos</label>
         <select value={props.valor} onChange={actualizarEquipos}>
             <option value={''} disabled defaultValue={''} hidden>Selecciona el equipo</option>
-            {equipos.map((equipo, index) => { // Aqui estamos ussando el .map para de sa manera hacer un mapeo de del arreglo
+            {props.equipo.map((equipo, index) => { // (estamos recibiendo la informacion de formulario y epsues hacemos el meapeo de la inforamion y de esa manera se muestre)Aqui estamos ussando el .map para de sa manera hacer un mapeo de del arreglo
             //el .map solo se puede utilizar con arreglos n con objetos ni nada parecido
             //la plabra equipo recibe los valores del arreglo y los almacen ahi recurda que es un callback 
                 return <option key={index}>{equipo}</option> 

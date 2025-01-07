@@ -1,5 +1,5 @@
 import './ListaOpciones.css'
-const ListaOpciones = () =>{
+const ListaOpciones = (props) =>{
 
     const equipos = [
         'programacion',
@@ -18,9 +18,14 @@ const ListaOpciones = () =>{
         return ponemos l que quermos que nos retorne e puede utiliar codig html y js 
         })*/
 
+    const actualizarEquipos = (e) =>{
+        props.actualizarEquipo(e.target.value)
+    }
+
     return <div className="lista-opciones">
         <label>Equipos</label>
-        <select>
+        <select value={props.valor} onChange={actualizarEquipos}>
+            <option value={''} disabled defaultValue={''} hidden>Selecciona el equipo</option>
             {equipos.map((equipo, index) => { // Aqui estamos ussando el .map para de sa manera hacer un mapeo de del arreglo
             //el .map solo se puede utilizar con arreglos n con objetos ni nada parecido
             //la plabra equipo recibe los valores del arreglo y los almacen ahi recurda que es un callback 

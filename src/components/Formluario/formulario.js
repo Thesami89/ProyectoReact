@@ -23,7 +23,7 @@ const Formulario = (props) => {
             equipo
         }
 
-        console.log( datosAEnviar)
+        props.colaborador( datosAEnviar) //recibumos una funcion por medio de prpps donde se asiganran todos los obejtos que se creen 
     }
 
     return <div className='formulario'>

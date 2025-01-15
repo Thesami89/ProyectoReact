@@ -11,6 +11,9 @@ const Formulario = (props) => {
     const [foto, actualizarFoto] = useState('')
     const [equipo, actulizarEquipo] = useState('')
 
+    const [titulo, actulizarTitulo] = useState('')
+    const [color, actuializarColor]= useState ('')
+
     const preventForm = (e)=>{
         e.preventDefault()
         console.log('Ya estamos previniendo el defecto')
@@ -24,6 +27,11 @@ const Formulario = (props) => {
         }
 
         props.colaborador( datosAEnviar) //recibumos una funcion por medio de prpps donde se asiganran todos los obejtos que se creen 
+    }
+
+    const formEquipos = (e) => {
+        e.preventDefault()
+        props.nevoForm({titulo, colorPrimario: color})
     }
 
     return <div className='formulario'>
@@ -59,6 +67,26 @@ const Formulario = (props) => {
             <Btn texto ='Crear'/>      
       
 
+        </form>
+
+        <form onSubmit={formEquipos}> 
+            <h2> Rellena el formulario para crear el equipo.</h2>
+            <CampoTexto 
+                titulo= 'Equipo' 
+                placeholder="Ingresa tu Equipo" 
+                required={true}
+                valor = {titulo}
+                actualizarValor = {actulizarTitulo}
+            /> {/* La prop required se le manda el parametro true para indicar que sea verdadera la requisicion obligatoria  */} 
+
+            <CampoTexto 
+                titulo = 'Color' 
+                placeholder="Ingresa tu color en HEX" 
+                required
+                valor = {color}
+                actualizarValor = {actuializarColor}
+            />
+             <Btn texto ='Añadir equipo'/> 
         </form>
 
     </div>

@@ -3,6 +3,13 @@
     padding: 32px;
     text-align: center;
     box-sizing: border-box;
+    position: relative;
+}
+
+.input-color{
+    position: absolute;
+    top: 20px;
+    right: 20px;
     
 }
 
